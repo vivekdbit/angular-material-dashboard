@@ -1,0 +1,47 @@
+<!-- <h1 style="text-align:center"> My TODO APP  </h1> -->
+  <div class="login">
+    <!-- <h2 class="login-header">Log in</h2> -->
+
+    <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title> Log in </mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+        <mat-card-content> 
+            
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input type="password" matInput placeholder="Password" formControlName="password">
+            </mat-form-field>
+
+        </mat-card-content>
+        <button mat-stroked-button color="accent" mat-button type="submit" [disabled]="!loginForm.valid" class="btn-block">Log in</button>
+  
+      <!-- <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+        <input type="email" placeholder="Email" formControlName="email">
+      </p>
+  
+      <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+        <div *ngIf="formControls.email.errors.required">Email is required</div>
+      </div> -->
+  
+      <!-- <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+        <input type="password" placeholder="Password" formControlName="password">
+      </p>
+  
+      <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+        <div *ngIf="formControls.password.errors.required">Password is required</div>
+      </div> -->
+<!--   
+      <p>
+        <input type="submit" value="Log in">
+      </p>
+    </form> -->
+    </form>
+    </mat-card>
+  </div>
